@@ -20,6 +20,7 @@ package org.clamshellcli.core;
  * @author vladimir.vivien
  */
 public class ShellException extends RuntimeException{
+
     public ShellException(){
         super();
     }
@@ -33,3 +34,7 @@ public class ShellException extends RuntimeException{
         super(msg, ex);
     }
 }
+// They written the class name properly starts with the capital letter and first letter of each internal word capitalized
+//The choice of a variable name indicate to the casual observer the intent of its use and avoid single letter as a variable
+// Used block comments start of class.
+//First non comment line in this java class is package.

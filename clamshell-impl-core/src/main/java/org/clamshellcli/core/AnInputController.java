@@ -34,6 +34,7 @@ import java.util.regex.Pattern;
  * @author vladimir.vivien
  */
 public abstract class AnInputController implements InputController{
+
     private Pattern pattern;
     private Boolean enabled = Boolean.TRUE;
     
@@ -64,6 +65,7 @@ public abstract class AnInputController implements InputController{
      * @return a Set<String> containing the hints.
      */
     protected Set<String> collectInputHints(Command cmd){
+
         Command.Descriptor desc  = cmd.getDescriptor();
         if(desc == null ) return null;
         
@@ -85,3 +87,9 @@ public abstract class AnInputController implements InputController{
         return result;
     }
 }
+// Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Conditional loop written in the proper way.
+//for loop written in the proper way.

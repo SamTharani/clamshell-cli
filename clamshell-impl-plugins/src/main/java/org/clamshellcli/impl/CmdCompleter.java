@@ -27,6 +27,7 @@ import org.clamshellcli.api.Command;
  * @author vladimir.vvien
  */
 public class CmdCompleter implements Completer{
+
     StringsCompleter cmdNamesCompleter;
     Map<String,List<String>> cmdHints;
     
@@ -36,6 +37,7 @@ public class CmdCompleter implements Completer{
     
     @Override
     public int complete(String input, int cursor, List<CharSequence> result) {
+
         String cmd = input != null ? input.substring(0, cursor) : "";
         // display all avail cmds
         if (cmd.isEmpty() && cmdHints != null) {
@@ -62,3 +64,8 @@ public class CmdCompleter implements Completer{
         return result.isEmpty() ? -1 : cmd.length() + 1;
     }
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Conditional loop written in the proper way.

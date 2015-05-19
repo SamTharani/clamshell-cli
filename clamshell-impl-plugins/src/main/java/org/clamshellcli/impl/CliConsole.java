@@ -45,6 +45,7 @@ import org.fusesource.jansi.AnsiRenderWriter;
  * @author vladimir.vivien
  */
 public class CliConsole implements IOConsole{
+
     private boolean plugged;
     private Context context;
     private Configurator config;
@@ -83,6 +84,7 @@ public class CliConsole implements IOConsole{
 
     @Override
     public void plug(Context plug) {
+
         context = plug;
         config = plug.getConfigurator();
         shell = plug.getShell();
@@ -101,9 +103,9 @@ public class CliConsole implements IOConsole{
             }
             // setup history
             history = new FileHistory(histFile);
-            history.moveToEnd();
-            console.setHistoryEnabled(true);
-            console.setHistory(history);
+            history.moveToEnd();//Method call by an object of the FileHistory class
+            console.setHistoryEnabled(true);//Method call by an object of the ConsoleReader class
+            console.setHistory(history);//Method call by an object of the ConsoleReader class
             
             // console plugged
             plugged = true;
@@ -116,6 +118,7 @@ public class CliConsole implements IOConsole{
     
     @Override
     public void unplug(Context plug){
+
         try {
             plugged = false;
             history.flush();
@@ -143,6 +146,7 @@ public class CliConsole implements IOConsole{
     }
     
     public void setHistoryFile(File f){
+
         histFile = f;
         try{
             history  = new FileHistory(histFile);
@@ -154,6 +158,7 @@ public class CliConsole implements IOConsole{
     
     @Override
     public void saveHistory() {
+
         try {
             history.flush();
         } catch (IOException ex) {
@@ -168,6 +173,7 @@ public class CliConsole implements IOConsole{
     
     @Override
     public void clearHistory() {
+
         try {
             history.purge();
         } catch (IOException ex) {
@@ -186,6 +192,7 @@ public class CliConsole implements IOConsole{
 
     @Override
     public String readLine() {
+
         try {
             return console.readLine();
         } catch (IOException ex) {
@@ -195,6 +202,7 @@ public class CliConsole implements IOConsole{
 
     @Override
     public String readLine(String prompt) {
+
         try {
             return console.readLine(prompt);
         } catch (IOException ex) {
@@ -204,6 +212,7 @@ public class CliConsole implements IOConsole{
 
     @Override
     public String readLine(char maskChar) {
+
         try {
             return console.readLine(maskChar);
         } catch (IOException ex) {
@@ -213,6 +222,7 @@ public class CliConsole implements IOConsole{
 
     @Override
     public String readLine(String prompt, char maskChar) {
+
         try {
             return console.readLine(prompt, maskChar);
         } catch (IOException ex) {
@@ -242,6 +252,7 @@ public class CliConsole implements IOConsole{
 
     @Override
     public void clearScreen() {
+
         try{
             if(!console.clearScreen()){
                 out.println ("Clearscreen command is not supported on terminal.");
@@ -258,8 +269,16 @@ public class CliConsole implements IOConsole{
     
     
     private void assertComponentPlugged() {
+
         if (!plugged){
             throw new IllegalStateException("Component is unplugged.");
         }
     }
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.
+//try catch written in the proper way.

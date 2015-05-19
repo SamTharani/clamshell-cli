@@ -41,6 +41,7 @@ import org.clamshellcli.api.SplashScreen;
  * @author vvivien
  */
 public class ShellContext implements Context{
+
     private static final Logger log = Logger.getLogger(ShellContext.class.getName());
     private Map<String, Object> values;
 
@@ -132,6 +133,7 @@ public class ShellContext implements Context{
      */
     @Override
     public <T> List<T> getPluginsByType(Class<T> type) {
+
         return Clamshell.Runtime.filterPluginsByType(getPlugins(),type);
     }
     
@@ -181,6 +183,7 @@ public class ShellContext implements Context{
     
     @Override
     public List<Command> getCommandsByNamespace(String namespace){
+
         List<Command> result = new ArrayList();
         for(Command cmd: getCommands()){
             Command.Descriptor desc = cmd.getDescriptor();
@@ -193,7 +196,8 @@ public class ShellContext implements Context{
     
     @Override
     public Map<String,Command> mapCommands(List<Command> commands){
-        Map<String,Command> cmdMap = new HashMap<String,Command>();
+
+        Map<String,Command> cmdMap=new HashMap<String,Command>();
         for(Command cmd : commands){
             Command.Descriptor desc = cmd.getDescriptor();
             if(desc != null && desc.getName() != null){
@@ -203,3 +207,11 @@ public class ShellContext implements Context{
         return cmdMap;
     }    
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.
+//for loop written in the proper way.
+

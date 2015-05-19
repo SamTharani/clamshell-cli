@@ -31,11 +31,13 @@ import java.util.Map;
  * @author vladimir.vivien
  */
 public class HelpCmd implements Command{
+// There is no space between class and interface definition
     private static final String NAMESPACE = "syscmd";
     private static final String CMD_NAME = "help";
     private HelpCmdDescriptor descriptor = new HelpCmdDescriptor();
     
     private class HelpCmdDescriptor implements Command.Descriptor {
+    // There is no space between class and method definition
         @Override public String getNamespace() {return NAMESPACE;}
         
         @Override
@@ -76,6 +78,7 @@ public class HelpCmd implements Command{
      */
     @Override
     public Object execute(Context ctx) {
+     // There is no space between method definition and variable declaration
         String[] args = (String[]) ctx.getValue(Context.KEY_COMMAND_LINE_ARGS);
 
         // if arg passed, display help for command matching arg.
@@ -99,6 +102,7 @@ public class HelpCmd implements Command{
     }
     
     private void printCommandHelp(Context ctx, String cmdName){
+    // There is no space between method definition and variable declaration
         Map<String, Command> commands = ctx.mapCommands(ctx.getCommands());
         if(commands != null){
             Command cmd = commands.get(cmdName.trim());
@@ -113,6 +117,7 @@ public class HelpCmd implements Command{
     }
     
     private void printCommandHelp(Context ctx, Command cmd){
+    // There is no space between method definition and variable declaration
         if(cmd != null && cmd.getDescriptor() != null){
             IOConsole io = ctx.getIoConsole();
             io.printf("%n@|bold,red Command:|@ %s - %s%n", 
@@ -127,6 +132,7 @@ public class HelpCmd implements Command{
     }
     
     private void printCommandParamsDetail(Context ctx, Command cmd){
+        // There is no space between method definition and variable declaration
         Command.Descriptor desc = cmd.getDescriptor();
         if(desc == null || desc.getArguments() == null) return;
         IOConsole c = ctx.getIoConsole();
@@ -142,6 +148,7 @@ public class HelpCmd implements Command{
     }
     
     private void printAllHelp(Context ctx){
+
         IOConsole c = ctx.getIoConsole();
         c.printf("%nAvailable Commands");
         c.printf("%n------------------");
@@ -157,3 +164,12 @@ public class HelpCmd implements Command{
     }
     
 }
+// Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.
+//for loop written in the proper way.
+//Reference variable call by the class instead of class object.
+//Long length separated by the comma.

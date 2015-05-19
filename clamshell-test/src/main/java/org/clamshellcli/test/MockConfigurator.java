@@ -25,6 +25,7 @@ import java.util.Map;
  * @author vladimir
  */
 public class MockConfigurator implements Configurator{
+
     private Map<String, Map<String, ? extends Object>> configMap;
     
     public MockConfigurator() {
@@ -42,6 +43,7 @@ public class MockConfigurator implements Configurator{
     }
 
     public Map<String, String> getPropertiesMap() {
+
         return (Map<String, String>) configMap.get(Configurator.KEY_CONFIG_PROPS);
     }    
     public void setPropertiesMap(Map<String,String> map){
@@ -49,6 +51,7 @@ public class MockConfigurator implements Configurator{
     }
     
     public void addProperty(String name, String val){
+
         if(getPropertiesMap() != null)
             getPropertiesMap().put(name, val);
         else{
@@ -59,14 +62,17 @@ public class MockConfigurator implements Configurator{
     }
 
     public Map<String, Map<String, ? extends Object>> getControllersMap() {
+
         return (Map<String, Map<String, ? extends Object>>) configMap.get(Configurator.KEY_CONFIG_CTRLS);
     }
     
     public void setControllersMap(Map<String, Map<String, ? extends Object>> map){
+
         configMap.put(Configurator.KEY_CONFIG_CTRLS, map);
     }
     
     public void addControllerMap(String name, Map<String,? extends Object> attribs){
+
         if(getControllersMap() != null){
             getControllersMap().put(name, attribs);
         }else{
@@ -75,3 +81,9 @@ public class MockConfigurator implements Configurator{
         }
     }
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.

@@ -32,9 +32,12 @@ import org.clamshellcli.api.IOConsole;
  * @author vladimir.vivien
  */
 public class CliSplashScreen implements SplashScreen {
+
     private StringBuilder screen;
+
     @Override
     public void render(Context ctx) {
+
         IOConsole console = ctx.getIoConsole();
         console.println(screen.toString());
     }
@@ -69,3 +72,7 @@ public class CliSplashScreen implements SplashScreen {
     }
     
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.

@@ -27,7 +27,8 @@ import java.util.regex.Pattern;
  * Implement the getProperty() method to expose system-wide property values.
  * @author vladimir.vivien
  */
-public interface Configurator {
+public interface Configurator { // There is no space between class and interface definition
+
     public static String VALUE_DIR_ROOT = ".";    
     public static final String KEY_CONFIG_FILE  = "cli.config.file"; // property name for property file.
     public static final String KEY_CONFIG_PROPS = "properties";
@@ -59,3 +60,8 @@ public interface Configurator {
      */
     public Map<String,Map<String, ? extends Object>> getControllersMap();
 }
+// Interface name start with the capital letters.
+//Block command used before each of the method.
+// Method name starts with the simple letter and first letter of each internal word capitalized
+//First non comment line in this java class is package and import
+//Constants define by all Uppercase letters and they are separated by the _(underscore).

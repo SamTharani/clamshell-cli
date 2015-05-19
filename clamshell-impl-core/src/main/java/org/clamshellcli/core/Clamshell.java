@@ -37,10 +37,12 @@ import org.clamshellcli.api.Plugin;
  * @author Vladimir Vivien
  */
 public final class Clamshell {
+
     private static final Logger log = Logger.getLogger(Clamshell.class.getName());
     private Clamshell(){}
     
     public static class Runtime {
+
         private static ShellContext ctx;
         private static Configurator config;
         
@@ -61,6 +63,7 @@ public final class Clamshell {
          * @return 
          */
         public static <T> List<T> loadServicePlugins(Class<T> type, ClassLoader parent) {
+
              ServiceLoader<T> loadedTypes = ServiceLoader.load(type, parent);
              List<T> result = new ArrayList<T>();
              for(T t : loadedTypes){
@@ -77,6 +80,7 @@ public final class Clamshell {
          * @return 
          */
         public static <T> List<T> filterPluginsByType(List<? extends Plugin> services, Class<T> type) {
+
             List<T> result = new ArrayList<T>();
             for (Plugin p : services) {
                 if (type.isAssignableFrom(p.getClass())) {
@@ -111,7 +115,11 @@ public final class Clamshell {
          * @return
          * @throws Exception 
          */
-        public static ClassLoader getClassLoaderFromFiles(final File[] filePaths, final Pattern filePattern, final ClassLoader parent) throws Exception {
+        public static ClassLoader getClassLoaderFromFiles(final File[] filePaths,
+                                                          final Pattern filePattern,
+                                                          final ClassLoader parent)
+            throws Exception {
+            // Break after a comma between the local variables in a method.
             List<URL> classpath = new ArrayList<URL>();
             
             for(int i = 0; i < filePaths.length; i++){
@@ -155,6 +163,7 @@ public final class Clamshell {
          * @throws Exception 
          */
         public static ClassLoader getClassLoaderFromDirs(File[] dirs, ClassLoader parent) throws Exception {
+
             File[] fileDirs = correctPaths(dirs);
             List<URL> classpath = new ArrayList<URL>();
             for(int i = 0 ; i < fileDirs.length; i++){
@@ -174,6 +183,7 @@ public final class Clamshell {
          * @throws Exception 
          */
         public static ClassLoader createClassLoaderFromFiles(File[] paths, ClassLoader parent) throws Exception{
+
             return getClassLoaderFromFiles(paths, Pattern.compile(".*\\.jar"),parent);
         }
 
@@ -183,6 +193,7 @@ public final class Clamshell {
          * @return 
          */
         private static File[] correctPaths(File[] paths) throws Exception{
+
             File[] correctedPaths = new File[paths.length];
             for(int i = 0; i < paths.length; i++){
                 String pathName = paths[i].getName();
@@ -197,3 +208,10 @@ public final class Clamshell {
         }
     }
 }
+// Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.
+//for loop written in the proper way.

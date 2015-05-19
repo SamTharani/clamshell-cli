@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/clamshell.iml" filepath="$PROJECT_DIR$/clamshell.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clamshell-api/clamshell-api.iml" filepath="$PROJECT_DIR$/clamshell-api/clamshell-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clamshell-echo-controller/clamshell-echo-controller.iml" filepath="$PROJECT_DIR$/clamshell-echo-controller/clamshell-echo-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clamshell-impl-commands/clamshell-impl-commands.iml" filepath="$PROJECT_DIR$/clamshell-impl-commands/clamshell-impl-commands.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clamshell-impl-core/clamshell-impl-core.iml" filepath="$PROJECT_DIR$/clamshell-impl-core/clamshell-impl-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clamshell-impl-plugins/clamshell-impl-plugins.iml" filepath="$PROJECT_DIR$/clamshell-impl-plugins/clamshell-impl-plugins.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clamshell-impl-splashscreen/clamshell-impl-splashscreen.iml" filepath="$PROJECT_DIR$/clamshell-impl-splashscreen/clamshell-impl-splashscreen.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clamshell-launcher/clamshell-launcher.iml" filepath="$PROJECT_DIR$/clamshell-launcher/clamshell-launcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clamshell-test/clamshell-test.iml" filepath="$PROJECT_DIR$/clamshell-test/clamshell-test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/clamshell-time-command/clamshell-time-command.iml" filepath="$PROJECT_DIR$/clamshell-time-command/clamshell-time-command.iml" />
+      <module fileurl="file://$PROJECT_DIR$/project-assembler/project-assembler.iml" filepath="$PROJECT_DIR$/project-assembler/project-assembler.iml" />
+    </modules>
+  </component>
+</project>

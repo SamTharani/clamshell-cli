@@ -40,6 +40,7 @@ import org.clamshellcli.api.Plugin;
  * @author vladimir.vivien
  */
 public class Run {
+
     public static void main(String[] args){        
         // create/confiugre the context
         Context context  = null;
@@ -102,6 +103,7 @@ public class Run {
         // load plugins
         List<Plugin> plugins =  Clamshell.Runtime.loadServicePlugins(Plugin.class, pluginsCl);
         if(plugins.isEmpty()){
+
             System.out.printf ("%nNo Plugin classes found in plugins directory, exiting...%n");
             System.exit(1);
         }
@@ -110,6 +112,7 @@ public class Run {
                 
         // Look for default Shell to launch.
         if(shells.size() > 0){
+
             Shell shell = shells.get(0);
             try{
                 context.putValue(Context.KEY_SHELL_COMPONENT, shell);
@@ -136,6 +139,7 @@ public class Run {
     
     //TODO careful, Cotext is not thread-safe.
     private static class ShutdownHook  extends Thread {
+
         private final Context context;
         public ShutdownHook(final Context ctx){
             context = ctx;
@@ -151,3 +155,10 @@ public class Run {
         }
     }
 }
+// Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.
+//try catch written in a proper way.

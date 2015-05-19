@@ -73,17 +73,20 @@ public final class MockContext implements Context
     }
 
     public Shell getShell() {
+
         List<Shell> shells = this.getPluginsByType(Shell.class);
         return (shells != null && shells.size() > 0)  ? shells.get(0) : null;
     }
 
     public IOConsole getIoConsole() {
+
         List<IOConsole> consoles = this.getPluginsByType(IOConsole.class);
         return (consoles != null && consoles.size() > 0)  ? consoles.get(0) : null;
     }
         
 
     public Prompt getPrompt() {
+
         List<Prompt> prompts = this.getPluginsByType(Prompt.class);
         return (prompts != null && prompts.size() > 0)  ? prompts.get(0) : null;
     }
@@ -98,6 +101,7 @@ public final class MockContext implements Context
 
     @Override
     public <T> List<T> getPluginsByType(Class<T> type) {
+
         List<T> result = new ArrayList<T>();
         for (Plugin p : getPlugins()) {
             if (type.isAssignableFrom(p.getClass())) {
@@ -112,25 +116,37 @@ public final class MockContext implements Context
     }
     
     public List<Command> getCommandsByNamespace(String namespace) {
+
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
     public Map<String, Command> mapCommands(List<Command> commands) {
+
         throw new UnsupportedOperationException("Not supported yet.");
     }    
 
     @Override
     public List<InputController> getControllers() {
+
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public List<SplashScreen> getSplashScreens() {
+
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public ClassLoader getClassLoader() {
+
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.
+//for loop written in proper way.

@@ -28,6 +28,7 @@ public class MockCommand implements Command{
 
     @Override
     public Descriptor getDescriptor() {
+
         return new Command.Descriptor() {
 
             @Override
@@ -77,7 +78,14 @@ public class MockCommand implements Command{
 
     @Override
     public void unplug(Context plug) {
+
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+
+

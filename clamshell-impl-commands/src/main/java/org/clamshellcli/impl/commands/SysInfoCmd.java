@@ -45,7 +45,7 @@ import java.util.Map.Entry;
  * 
  * @author vvivien
  */
-public class SysInfoCmd implements Command{
+public class SysInfoCmd implements Command{// There is no space between class and variable declaration
     private static final String NAMESPACE = "syscmd";
     private static final String CMD_NAME = "sysinfo";
     private SysInfoDescriptor descriptor;
@@ -60,11 +60,11 @@ public class SysInfoCmd implements Command{
         @Parameter(names = {"-cp","-classpath"}, required=false, description = "Displays JVM classpath information.")
         public boolean cp = false;      
         
-        @Parameter(names = {"-mem","-memory"}, required=false, description = "Displays memory inforamtion about current JVM.")
+        @Parameter(names = {"-mem","-memory"}, required=false, description = "Displays memory information about current JVM.")
         public boolean mem = false;        
     }
     
-    private class SysInfoDescriptor implements Command.Descriptor {
+    private class SysInfoDescriptor implements Command.Descriptor {// There is no space between class and variable declaration
         private JCommander commander;
         SysInfoParams parameters;
                 
@@ -87,7 +87,7 @@ public class SysInfoCmd implements Command{
         }
 
         @Override
-        public String getUsage() {
+        public String getUsage() {// There is no space between method definition and variable declaration
             StringBuilder result = new StringBuilder();
             result
                 .append(Configurator.VALUE_LINE_SEP)
@@ -203,3 +203,12 @@ public class SysInfoCmd implements Command{
     }
     
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.
+//for loop written in the proper way.
+//Reference variable call by the class instead of class object.
+//Long length separated by the comma.

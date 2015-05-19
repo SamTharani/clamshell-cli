@@ -55,6 +55,7 @@ import org.clamshellcli.core.Clamshell;
  * @author vladimir.vivien
  */
 public class CmdController extends AnInputController{
+
     private static Class COMMAND_TYPE = Command.class;
     private static String COMMANDS_DIR_NAME = "commands";
     private static String CLASSES_DIR_NAME = "classes";
@@ -79,6 +80,7 @@ public class CmdController extends AnInputController{
      */
     @Override
     public boolean handle(Context ctx) {
+
         String cmdLine = (String)ctx.getValue(Context.KEY_COMMAND_LINE_INPUT);
         boolean handled = false;
 
@@ -123,6 +125,7 @@ public class CmdController extends AnInputController{
      */
     @Override
     public void plug(Context plug) {
+
         List<Command> allCmds = loadCommands(plug);        
         if(allCmds.size() > 0){
             plug.putValue(Context.KEY_COMMANDS, allCmds);
@@ -141,6 +144,7 @@ public class CmdController extends AnInputController{
         
     @Override
     public void unplug(Context plug){
+
         List<Command> cmds = plug.getCommands();
         for (Command cmd : cmds){
             try{
@@ -153,6 +157,7 @@ public class CmdController extends AnInputController{
     }
     
     private List<Command> loadCommands(Context plug) {
+
         File commandsDir = new File(COMMANDS_DIR_NAME);
         File classesDir  = new File(commandsDir, CLASSES_DIR_NAME);
         IOConsole console = plug.getIoConsole();
@@ -190,3 +195,10 @@ public class CmdController extends AnInputController{
     }
 
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.
+//try catch written in a proper way.

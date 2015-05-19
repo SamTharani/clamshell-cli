@@ -123,3 +123,7 @@ public interface IOConsole extends Plugin{
      */
     public void close();
 }
+//Interface name start with the capital letters.
+//Block command used before each of the method.
+// Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.

@@ -36,17 +36,20 @@ import static org.clamshellcli.api.Configurator.KEY_CONFIG_FILE;
  * @author vvivien
  */
 public class ShellConfigurator implements Configurator{
+
     private static final Logger log = Logger.getLogger(ShellConfigurator.class.getName());
     private static final String CONFIG_FILE_PATH = "./" + VALUE_CONFIG_FILE;
     private File configFile;
     private Map<String, Map<String,?>> configMap;
 
     private ShellConfigurator(String configFileName){
+
         configFile = createConfigFile(configFileName);
         initialize();
     }
     
     public static ShellConfigurator createNewInstance(String configFileName){
+
         return new ShellConfigurator(configFileName);
     }
     
@@ -60,6 +63,7 @@ public class ShellConfigurator implements Configurator{
     
     @Override
     public Map<String, Map<String,? extends Object>> getControllersMap() {
+
         return (configMap != null) ? 
             (Map<String, Map<String, ? extends Object>>) configMap.get(KEY_CONFIG_CTRLS) :
             null;
@@ -67,6 +71,7 @@ public class ShellConfigurator implements Configurator{
     
     @Override
     public Map<String,String> getPropertiesMap(){
+
         return (configMap != null ) ? 
             (Map<String, String>) configMap.get(KEY_CONFIG_PROPS) :
             null;
@@ -78,6 +83,7 @@ public class ShellConfigurator implements Configurator{
     }
     
     private File createConfigFile(String fileName){
+
         return (fileName != null ) ? new File(fileName) :
             new File(
                 (System.getProperty(KEY_CONFIG_FILE) != null)
@@ -87,7 +93,9 @@ public class ShellConfigurator implements Configurator{
     }
 
     private void initialize() {
+
         if(configFile != null && configFile.exists() && configFile.isFile()){
+
             Gson gson = new Gson();
             Type mapType = new TypeToken<Map<String,? extends Object>>(){}.getType();
             try {
@@ -99,3 +107,10 @@ public class ShellConfigurator implements Configurator{
     }
    
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Reference variable call by the class instead of class object.
+//try catch coded in a proper way.

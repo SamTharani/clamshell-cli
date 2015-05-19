@@ -27,9 +27,10 @@ import org.clamshellcli.core.AnInputController;
  * 
  * @author vladimir.vivien
  */
-public class EchoController extends AnInputController{
+public class EchoController extends AnInputController{ // There is no space between class and interface definition
     @Override
     public boolean handle(Context ctx) {
+
         boolean handled = false;
         IOConsole console = ctx.getIoConsole();
         String inputLine = (String) ctx.getValue(Context.KEY_COMMAND_LINE_INPUT);
@@ -49,3 +50,9 @@ public class EchoController extends AnInputController{
     }
     
 }
+// Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.

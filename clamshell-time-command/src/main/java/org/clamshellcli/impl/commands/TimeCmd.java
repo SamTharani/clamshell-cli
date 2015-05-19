@@ -31,11 +31,13 @@ import org.clamshellcli.api.IOConsole;
  * @author vladimir.vivien
  */
 public class TimeCmd implements Command {
+
     private static final String NAMESPACE = "syscmd";
     private static final String ACTION_NAME = "time";
 
     @Override
     public Object execute(Context ctx) {
+
         IOConsole console = ctx.getIoConsole();
         console.printf("%n%s%n%n",new Date().toString());
         return null;
@@ -48,6 +50,7 @@ public class TimeCmd implements Command {
     
     @Override
     public Command.Descriptor getDescriptor(){
+
         return new Command.Descriptor() {
             @Override public String getNamespace() {return NAMESPACE;}
             
@@ -78,3 +81,8 @@ public class TimeCmd implements Command {
     }
     
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).

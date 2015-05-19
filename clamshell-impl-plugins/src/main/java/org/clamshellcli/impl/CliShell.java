@@ -42,6 +42,7 @@ import org.clamshellcli.api.SplashScreen;
  * @author vladimir.vivien
  */
 public class CliShell implements Shell{
+
     private AtomicBoolean loopRunning;
     private Context context;
     private IOConsole console;
@@ -73,6 +74,7 @@ public class CliShell implements Shell{
      */
     @Override
     public void plug(Context plug) {
+
         context = plug;
         loadComponents(plug);
         loopRunning = new AtomicBoolean(true);
@@ -81,6 +83,7 @@ public class CliShell implements Shell{
     
     @Override
     public void unplug(Context plug ){
+
         unloadComponent(plug);
         loopRunning.set(false);
         consoleThread.interrupt();
@@ -98,6 +101,7 @@ public class CliShell implements Shell{
      * @param plug 
      */
     private void loadComponents(Context plug) {
+
         context = plug;
         
         // Load IOConsole Component
@@ -210,6 +214,7 @@ public class CliShell implements Shell{
     }
     
     private void startConsoleThread() {
+
         consoleThread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -267,6 +272,7 @@ public class CliShell implements Shell{
     }
     
     private void configureController (InputController controller){
+
         String ctrlClassName = this.getClass().getName();
         Configurator config = context.getConfigurator();
         
@@ -288,3 +294,11 @@ public class CliShell implements Shell{
         }        
     }
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
+//Conditional loop written in the proper way.
+//Long phrase separated by the '+' operator
+

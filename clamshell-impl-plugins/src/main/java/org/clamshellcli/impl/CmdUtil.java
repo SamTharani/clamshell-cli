@@ -35,6 +35,7 @@ public class CmdUtil{
      * @return 
      */
     public static Map<String,List<String>> extractCommandHints (List<Command> commands) {
+
         Map<String, List<String>> result = new TreeMap<String,List<String>>();
         
         for (Command cmd : commands) {
@@ -47,6 +48,7 @@ public class CmdUtil{
     }
     
     private static List<String> extractArgs(Command cmd) {
+
         if (cmd.getDescriptor() == null || cmd.getDescriptor().getArguments() == null) {
             return null;
         }
@@ -64,6 +66,7 @@ public class CmdUtil{
      * @return 
      */
     public static List<Completer> getHintsAsCompleters(Map<String,List<String>> hints) {
+
         List<Completer> completors = new ArrayList<Completer>(hints.size());
         for (Map.Entry<String, List<String>> hint : hints.entrySet()){
             List<String> argList = hint.getValue();
@@ -73,3 +76,8 @@ public class CmdUtil{
         return completors;
     }
 }
+//Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Conditional loop written in the proper way.

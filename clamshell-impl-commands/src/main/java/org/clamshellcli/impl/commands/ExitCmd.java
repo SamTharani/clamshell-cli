@@ -28,6 +28,7 @@ import java.util.Map;
  * @author vvivien
  */
 public class ExitCmd implements Command {
+// There is no space between class and interface definition
     private static final String NAMESPACE = "syscmd";
     private static final String ACTION_NAME = "exit";
 
@@ -49,7 +50,9 @@ public class ExitCmd implements Command {
     
     @Override
     public Command.Descriptor getDescriptor(){
+
         return new Command.Descriptor() {
+
             @Override public String getNamespace() {return NAMESPACE;}
             
             @Override
@@ -75,3 +78,8 @@ public class ExitCmd implements Command {
     }
     
 }
+// Class name start with the capital letters and first letter of each internal word capitalized..
+//Block command used before each of the method.
+//Method name starts with the simple letter and first letter of each internal word capitalized.
+//First non comment line in this java class is package and import.
+//Constants define by all Uppercase letters and they are separated by the _(underscore).
